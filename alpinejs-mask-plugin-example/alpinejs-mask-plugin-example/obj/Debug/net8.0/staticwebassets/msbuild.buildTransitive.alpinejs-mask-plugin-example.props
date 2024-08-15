@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/alpinejs-mask-plugin-example.props" />
+</Project>

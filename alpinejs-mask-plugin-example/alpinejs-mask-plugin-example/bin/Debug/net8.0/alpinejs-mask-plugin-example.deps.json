@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "alpinejs-mask-plugin-example/1.0.0": {
+        "runtime": {
+          "alpinejs-mask-plugin-example.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "alpinejs-mask-plugin-example/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

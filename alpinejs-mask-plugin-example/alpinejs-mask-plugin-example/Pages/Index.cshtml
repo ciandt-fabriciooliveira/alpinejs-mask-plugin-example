@@ -1,0 +1,63 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<main>
+    <div class="container">
+        <div class="row d-flex flex-wrap">
+            <div class="col-md-4 p-4">
+                <h2 class="mb-3">Dates</h2>
+                <div class="mb-3">
+                    <label for="mm-dd" class="form-label">MM/DD</label>
+                    <input id="mm-dd" x-mask="99/99" placeholder="MM/DD" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="yyyy-mm-dd" class="form-label">YYYY/MM/DD</label>
+                    <input id="yyyy-mm-dd" x-mask="9999/99/99" placeholder="YYYY/MM/DD" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="yyyy-mm" class="form-label">YYYY/MM</label>
+                    <input id="yyyy-mm" x-mask="9999/99" placeholder="YYYY/MM" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="yyyy" class="form-label">YYYY</label>
+                    <input id="yyyy" kx-mas="9999" placeholder="YYYY" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4 p-4">
+                <h2 class="mb-3">Money</h2>
+                <div class="mb-3">
+                    <label for="credit-card" class="form-label">Credit Card</label>
+                    <input id="credit-card" placeholder="9999 9999 9999 9999" x-mask:dynamic="
+                        $input.startsWith('34') || $input.startsWith('37')
+                            ? '9999 999999 99999' : '9999 9999 9999 9999'
+                    " class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="generic-money" class="form-label">Generic money</label>
+                    <input id="generic-money" placeholder="0.0001" x-mask:dynamic="$money($input, '.', ',', 4)" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4 p-4">
+                <h2 class="mb-3">Form</h2>
+                <div class="mb-3">
+                    <label for="add-https" class="form-label">UK zip code</label>
+                    <input x-mask="A9 9AA" placeholder="AB1 2CD" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="add-https" class="form-label">Telephone Number</label>
+                    <input x-mask="9999 999 999" placeholder="01234 567 890" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 p-4">
+            <h2 class="mb-3">Custom</h2>
+            <div class="mb-3">
+                <label for="add-https" class="form-label">Add https</label>
+                <input id="add-https" placeholder="https://www.website.com" x-mask:dynamic="addHttps($input)" class="form-control">
+            </div>
+        </div>
+    </div>
+</main>
